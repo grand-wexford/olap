@@ -1,0 +1,173 @@
+@import 'globals';
+@include react-md-everything;
+body {
+    margin: 0;
+}
+
+img,
+svg {
+    display: block;
+}
+
+$blue: #3bbfce;
+p {
+    color: $blue;
+}
+
+.App {
+    .graph-holder {
+        // background: $md-blue-grey-50;
+        // color: $md-blue-grey-500;
+    }
+    .menu-holder {
+        // background: $md-blue-grey-100;
+        // color: $md-blue-grey-500;
+    }
+    .cursor-default {
+        cursor: default;
+    }
+    .cursor-pointer {
+        cursor: pointer;
+    }
+    .graph-holder {
+        margin: 0;
+        padding: 0;
+    }
+    .map-holder {
+        border-color: #d8d6d6;
+        opacity: 0.8;
+        border-width: 1px;
+        border-style: solid;
+        min-height: 80px;
+        max-height: 200px;
+        border-radius: 3px 0 0 0;
+        position: relative;
+        top: 100%;
+        z-index: 1;
+        background: white;
+        float: right;
+        height: 146px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        width: 262px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .map-holder:hover {
+        opacity: 1;
+        zoom: 1; // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .padding-no {
+        padding: 0;
+    }
+    .map-icons-holder {
+        position: absolute;
+        right: 3px;
+        top: 3px;
+        width: 130px;
+        text-align: right;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        div {
+            text-align: right;
+            color: #6c6c6c;
+            font-weight: 700;
+        }
+        i {
+            cursor: pointer;
+        }
+    }
+    .map-percent {
+        display: inline-block;
+        margin-top: 2px;
+        vertical-align: top;
+    }
+    .collapsible {
+        display: inline-block;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .map-collapsed {
+        width: 1px;
+        opacity: 0.3;
+        margin-top: 0;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        .collapsible {
+            opacity: 0;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .map-icons-holder {
+            margin-top: 118px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    }
+    .hidden {
+        display: none;
+    }
+    .rotate-90 {
+        transform: rotate(90deg);
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .rotate-0 {
+        transform: rotate(0deg);
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .rotate-180 {
+        transform: rotate(180deg);
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .rotate-270 {
+        transform: rotate(270deg);
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .round {
+        border-radius: 50%;
+    }
+    .loader {
+        position: absolute;
+    }
+    .absolute {
+        position: absolute;
+    }
+    .table-expanded {
+        position: absolute;
+        z-index: 10;
+    }
+    .clear {
+        display: block;
+        clear: both;
+    }
+    .display-control-holder {
+        float: right;
+        right: 0;
+        i {
+            cursor: pointer;
+        }
+    }
+}
+
+.text-collapsed {
+    .md-data-table {
+        table-layout: fixed;
+    }
+    .md-table-column--adjusted {
+        padding-right: 0px;
+    }
+    .md-table-column {
+        line-height: normal;
+        padding-right: 2px;
+        white-space: nowrap;
+        /* word-wrap: break-word; */
+        /* display: inline-block; */
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .md-table-column--grow {
+        width: auto;
+    }
+    .md-table-column:first-child {
+        padding-left: 4px;
+    }
+    .md-icon-text:last-child {
+        padding-left: 2px;
+    }
+}
